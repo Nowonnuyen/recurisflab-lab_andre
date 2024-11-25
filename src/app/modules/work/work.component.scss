@@ -1,0 +1,401 @@
+$vale-blue: #091a20;
+$cerise-pink: #db3069;
+$sandstorm-yellow: #f5d547;
+$eggshell-white: #ffffff;
+$black-olive: #3c3c3b;
+$sky-blue: #0a89b8;
+
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
+
+body {
+  background-color: $eggshell-white;
+  position: relative; //rajoute nowon pb safari...
+}
+h1 {
+  //background-color: $vale-blue; (le titre de work)
+  color: $eggshell-white;
+  font-weight: 10;
+  font-size: xx-large;
+  text-align: center;
+  padding: 0.1em 0;
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  text-align: center;
+  font-size: larger;
+}
+//partie vidéo youtube
+body {
+  // min-width: 320px;
+  // margin: 0px;
+  // background: url("https://media.istockphoto.com/photos/empty-concrete-floor-for-car-park-picture-id1252248674?b=1&k=20&m=1252248674&s=170667a&w=0&h=YJqG58rwoT-8Ey17BiiBmc0iNnFo4WAXGcSqeMljt0M=");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // position: relative;
+
+  //background-attachment: fixed;
+  border-radius: 0.5rem solid;
+  //border: 10px solid white;
+  /*
+  background: rgb(30, 56, 85);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 56, 85, 1) 0%,
+    rgba(40, 75, 115, 1) 54%,
+    rgb(57, 112, 174) 100%
+  );
+   */
+  font-family: "Roboto", sans-serif;
+}
+// image du haut lecteur mp3
+.player-section {
+  min-width: 320px;
+  margin: 0px;
+  //background: url("https://wallpaperaccess.com/full/4863218.jpg");
+  background: url("../../../assets/images/Sugimoto.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative; 
+}
+//image du bas vidéo youtube
+.trailer-section {
+  min-width: 320px;
+  margin: 0px;
+  // background: url("https://cutewallpaper.org/21/spider-man-minimalist-wallpaper/Stunning-Spiderman-Minimalist-Wallpaper-images-For-Free-.png");
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.icon-prince-white {
+  position: absolute;
+  left: 3rem;
+  bottom: 0;
+}
+
+//partie player mp3
+.music-player {
+  // background: url("https://wallpaperaccess.com/full/4863218.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // position: relative;
+
+  // background-attachment: fixed;
+  // border-radius: 0.5rem solid;
+  
+}
+
+.container {
+  // max-width: 1200px;
+  height: auto;
+  margin: auto;
+
+  margin-top: 10px;
+  position: relative;
+}
+
+.img_container {
+  max-width: 360px;
+  height: auto;
+  margin: auto;
+}
+
+.img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.img_a {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 500px) {
+  .img_a {
+    display: none;
+  }
+}
+
+.img_a_container {
+  max-width: 54px;
+  height: auto;
+  margin: auto;
+  display: inline-block;
+  margin: 0px;
+}
+
+.logo {
+  width: auto;
+  max-width: 100%;
+  max-height: 85px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.logo_container {
+  max-width: 300px;
+  max-height: 85px;
+  margin: auto;
+}
+
+iframe {
+  margin: auto;
+}
+
+.list {
+  width: 40%;
+  height: auto;
+  margin: 4.5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.vertical-bar {
+  border-right: 1px solid #fff;
+  width: 2px;
+  height: 80px !important;
+}
+
+.video-title {
+  
+  h2, h5 {
+    color: #eb044b;
+    font-family: 'Syncopate';
+  }
+}
+
+@media (max-width: 800px) {
+  .list {
+    width: 98%;
+    display: block;
+    margin: auto;
+  }
+}
+
+.list_full {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding-bottom: 1px;
+  margin-bottom: 3%;
+  margin-top: 1%;
+}
+
+@media (max-width: 800px) {
+  .list_full {
+    width: 98%;
+  }
+}
+
+.list_music {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+  border-radius: 10px;
+  background-color: #000000;
+  padding-bottom: 1%;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+  .list_music {
+    width: 98%;
+  }
+}
+
+.treiler_container {
+  width: 90%;
+  height: auto;
+  margin: 4.5%;
+
+
+border-radius: 6px;
+background: linear-gradient(145deg, #131313, #131313);
+box-shadow:  5px 0px 0px #121212,
+             
+
+}
+
+.adapt {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.adapt iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+}
+
+.description {
+  width: 90%;
+  height: auto;
+  margin: 4.5%;
+  color: rgb(0, 0, 0);
+  font-family: "roboto, sans-serif";
+  font-size: small;
+  padding-top: 3%;
+  padding-bottom: 2%;
+
+  border-radius: 6px;
+ background-color: white;
+  box-shadow:   0px #fffefe,
+                0px #ffffff;
+}
+
+.description_music {
+  width: 90%;
+  height: auto;
+  margin: 4.5%;
+  color: white;
+  background-color: #1c2930;
+  padding-top: 4.5%;
+}
+
+.music {
+  width: 370px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+@media (max-width: 500px) {
+  .music {
+    width: auto;
+    text-align: center;
+  }
+}
+
+.music_name {
+  color: rgb(0, 0, 0);
+  background-color: #1c2930;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.music_a {
+  margin: auto;
+  width: 250px;
+  color: rgb(0, 0, 0);
+  background-color: #1c2930;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.video_a {
+  margin: auto;
+  width: 280px;
+  color: white;
+  background-color: #1c2930;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.footer_container {
+  height: 50px;
+  background-color: #1c2930;
+  color: white;
+}
+
+.footer_horisontal_center {
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer_vertical_center {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.footer {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 200px;
+  font-size: 14px;
+  background: #383d48;
+  margin: auto;
+  text-align: center;
+}
+
+button:hover {
+  background: #505e7c;
+}
+
+.archive {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-videos {
+  height: 75vh !important;
+}
+
+.grid-videos::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.grid-videos {
+  -ms-overflow-style: none !important;
+  /* IE and Edge */
+  scrollbar-width: none !important;
+  /* Firefox */
+}
+
+@supports (-webkit-touch-callout: none) {
+  .big-video-section {
+    margin-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-videos {
+    height: 46vh !important;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 992px) {
+  .grid-videos {
+    height: 40vh !important;
+  }
+}

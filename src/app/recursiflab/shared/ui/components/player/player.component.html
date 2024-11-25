@@ -1,0 +1,131 @@
+<div class="w-full mt-6">
+  <div class="flex items-center justify-center md:h-screen bg-red-lightest">
+    <div
+      class="bg-white shadow-lg rounded-lg p-2"
+      style="width: 45rem !important"
+    >
+      <div
+        class="flex-row place-content-center place-items-center mb-8 sm:flex"
+      >
+        <div class="flex justify-center">
+          <img
+            class="rounded sm:w-48 sm:h-48 w-100 h-100"
+            [src]="playerList[selectedId].path"
+            alt="Album Pic"
+          />
+        </div>
+        <div class="flex-row justify-center items-center w-full">
+          <div class="flex justify-center items-center mt-2">
+            <h3 class="text-2xl text-grey-darkest font-medium">
+              {{ playerList[selectedId].title }}
+              <p class="text-sm text-grey mt-1">
+                {{ playerList[selectedId].artist }}
+              </p>
+            </h3>
+          </div>
+          <div class="flex justify-center items-center mt-2">
+            <div (click)="onPrevious()" class="text-grey-darker">
+              <svg
+                class="w-8 h-8"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M4 5h3v10H4V5zm12 0v10l-9-5 9-5z" />
+              </svg>
+            </div>
+            <div
+              (click)="onStartPause()"
+              class="text-white p-1 rounded-full bg-red-light shadow-lg"
+            >
+              <div *ngIf="!checkPlayer()">
+                <svg
+                  class="w-12 h-12 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.2"
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                  ></path>
+                </svg>
+              </div>
+              <div *ngIf="checkPlayer()">
+                <svg
+                  class="w-12 h-12 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M10 9v6m4-6v6m7-3a9 9 0 0 9 9 0 0118"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div (click)="onNext()" class="text-grey-darker">
+              <svg
+                class="w-8 h-8"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M13 5h3v10h-3V5zM4 5l9 5-9 5V5z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <vm-player #player theme="light">
+        <vm-audio>
+          <source
+            #audio
+            [src]="playerList[selectedId].music"
+            type="audio/mp3"
+          />
+        </vm-audio>
+        <vm-default-ui no-controls>
+          <vm-controls full-width pin="center">
+            <vm-control-spacer></vm-control-spacer>
+            <vm-control-spacer></vm-control-spacer>
+          </vm-controls>
+        </vm-default-ui>
+        <ul
+          *ngFor="let m of playerList; let index = index"
+          class="text-xs sm:text-base divide-y border-t cursor-default"
+        >
+          <li class="flex items-center space-x-3 hover:bg-gray-100">
+            <button
+              (click)="onStartPause(index)"
+              [ngClass]="checkCurrent(index)"
+            >
+              <svg
+                class="w-4 h-4 group-hover:text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </button>
+            <div class="flex-1 song-title">{{ m.title }}</div>
+            <div *ngIf="getCurrentTime(index) > 0" class="flex-1">
+              {{ getCurrentTime(index) | secondToMinutes }}
+            </div>
+          </li>
+        </ul>
+      </vm-player>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<!--Carousel-->
+
+<div class="page-wrap">
+  <article>
+    <header class="article-header">
+      <h4 class="classification-header">Wrekslab's Album</h4>
+
+      <svg viewBox="0 0 560 259" class="header-lockup">
+        <text transform="matrix(1 0 0 1 -0.00007 116.14385)">
+          <tspan x="0" y="0" font-family="'Montserrat'" font-size="157px">
+            Port
+          </tspan>
+          <tspan x="0" y="139" font-family="'Montserrat'" font-size="181px">
+            Folio
+          </tspan>
+        </text>
+        <circle fill="#FFFFFF" cx="128.50781" cy="126.5" r="34.5" />
+        <text transform="matrix(1 0 0 1 114.62256 123)">
+          <tspan x="0" y="0" font-family="'Montserrat'" font-size="19px">
+            20
+          </tspan>
+          <tspan
+            x="-6.28906"
+            y="17"
+            font-family="'Montserrat'"
+            font-size="19px"
+          >
+            23
+          </tspan>
+        </text>
+      </svg>
+
+      <h2>Welcome to my portfolio</h2>
+
+      <div class="byline">By ©WREKSLAB</div>
+    </header>
+  </article>
+</div>
+
+<!--Album-->
+
+<div class="container my-5">
+  <!-- <articles-row
+    *ngIf="isOdd"
+    [article1]="Article[index]"
+    [article2]="Article[index + 1]"
+  ></articles-row> -->
+  <div class="row">
+    <div class="col-12 col-md-6" *ngFor="let a of categoryMusic">
+      <tracks-row [track1]="a"></tracks-row>
+    </div>
+  </div>
+</div>

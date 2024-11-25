@@ -1,0 +1,113 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$nowonwebsite-primary: mat.define-palette(mat.$indigo-palette);
+$nowonwebsite-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$nowonwebsite-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$nowonwebsite-theme: mat.define-light-theme((
+  color: (
+    primary: $nowonwebsite-primary,
+    accent: $nowonwebsite-accent,
+    warn: $nowonwebsite-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($nowonwebsite-theme);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate&display=swap");
+
+@font-face {
+  font-family: "Niconne";
+  src: local("Niconne"),
+    url("./assets/fonts/Niconne-Regular.ttf") format("truetype");
+}
+
+.font-syncopate {
+  font-family: "Syncopate";
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-modalbox {
+  width: 60% !important;
+
+  mat-dialog-container {
+    padding: 0;
+    app-video-detail {
+      position: relative;
+      .icon-prince-white {
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
+        width: 60px;
+      }
+      .rounded-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+        background-color: #000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: rgb(118, 118, 118);
+        }
+      }
+      div {
+        background-color: #181818;
+      }
+      div > iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
+    }
+  }
+}
+
+.active {
+  border-bottom: 1px solid #eb044b;
+}
+
+html {
+    min-height: 100%;
+}
+
+@media (max-width: 576px) {
+  .custom-modalbox {
+    width: 90% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-modalbox {
+    width: 50% !important;
+  }
+}

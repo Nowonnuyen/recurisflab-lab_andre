@@ -1,0 +1,60 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,900&display=swap");
+</style>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Syncopate&display=swap");
+</style>
+<section
+  class="w-screen h-screen text-gray-900 py-36 bg-center bg-cover bg-no-repeat bg"
+  style="background: url('../../../assets/images/swagcutnb.jpg')"
+>
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 items-center justify-center"
+  >
+    <div class="lg:w-3/6 lg:pr-0 pr-0">
+      <h1 class="font-medium text-5xl text-white text-center logo-text">
+        RECURSIFLAB
+      </h1>
+      <p class="leading-relaxed mt-4 text-white"></p>
+    </div>
+    <form
+      [formGroup]="form"
+      (ngSubmit)="submit()"
+      class="lg:w-3/6 xl:w-2/5 md:w-2/3 bg-gray-50 p-8 flex flex-col lg:ml-auto w-full mt-10 lg:mt-0 rounded-md md:mx-auto lg:mx-0"
+    >
+      <div class="relative mb-4">
+        <label for="subject" class="leading-7 text-sm text-gray-600"
+          >Subject</label
+        >
+        <input
+          (click)="clearSentNotification()"
+          type="text"
+          id="subject"
+          name="subject"
+          formControlName="subject"
+          class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out"
+        />
+      </div>
+      <div class="relative">
+        <label for="email" class="leading-7 text-sm text-gray-600"
+          >Message</label
+        >
+        <textarea
+          (click)="clearSentNotification()"
+          id="message"
+          name="message"
+          rows="4"
+          formControlName="body"
+          class="w-full bg-white rounded-md border border-gray-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-150 ease-in-out"
+        >
+        </textarea>
+      </div>
+      <div [class]="wasSent">Message sent!</div>
+      <button
+        class="text-white bg-blue-900 rounded-md border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 text-lg mt-4"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>

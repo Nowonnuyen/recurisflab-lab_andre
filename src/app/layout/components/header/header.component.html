@@ -1,0 +1,220 @@
+<nav
+  class="navbar navbar-expand-md navbar-light bg-light justify-content-between sticky-top"
+>
+  <a class="navbar-brand" href="#">
+    <!-- logo -->
+    <img
+      [src]="headerConfig.logo"
+      [alt]="headerConfig.name"
+      width="90"
+      height="90"
+      class="d-inline-block align-text-top ms-4"
+    />
+    {{ headerConfig.name }}
+  </a>
+  <!-- <button
+    #burgerBtn
+    class="navbar-toggler me-4"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+-->
+  <div
+    class="collapse navbar-collapse px-4 pt-2 pt-md-0"
+    id="navbarNavAltMarkup"
+  >
+    <div class="navbar-nav">
+      <a
+        *ngFor="let link of headerConfig.menu"
+        class="nav-item nav-link font-syncopate fw-bold custom-nav-link"
+        [routerLink]="link.routerLink"
+        routerLinkActive="active"
+      >
+        <i [class]="link.icon" aria-hidden="true" class="me-2 d-md-none"></i>
+        {{ link.name }}</a
+      >
+    </div>
+  </div>
+  <button class="btn btn-transparent me-4" (click)="toggleMenu()">
+    <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+  </button>
+</nav>
+<div
+  #fullscreenMenu
+  class="
+    d-flex flex-column vh-100 vw-100 fixed-top fullscreen-menu {{
+    isMenuOpen ? 'show-menu' : ''
+  }}
+  "
+>
+  <div class="d-flex justify-content-between">
+    <div class="d-flex align-items-center ms-4 mt-4">
+      <img
+        [src]="headerConfig.mobileLogo"
+        width="100"
+        class="d-inline-block d-lg-none me-2"
+      />
+      <!-- petit prince buger menu -->
+      <!-- image bug
+      <img
+        src="../../../../assets/images/aremplir"
+        class="ml-5 prince-icon d-none d-lg-block"
+        width="180"
+      /> -->
+    </div>
+    <button
+      class="btn btn-transparent me-3 mt-2 me-md-5 mt-md-4"
+      (click)="toggleMenu()"
+    >
+      <i class="fa fa-times fa-3x text-dark" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="row px-1 px-md-4 flex-grow-0 flex-lg-grow-1 mobile-menu">
+    <div
+      class="col-12 col-lg-3 col-xl-3 d-flex flex-column align-items-center d-none d-lg-inline-block"
+    >
+      <img
+        [src]="headerConfig.mobileLogo"
+        width="400"
+        class="d-none d-md-block logo-dropdown"
+      />
+    </div>
+    <div class="col-12 col-lg-3 col-xl-4 my-2 my-lg-0 h-lg-100">
+      <div class="profile-pic mb-3 mb-1 mb-lg-3 hidden-pic d-none d-lg-block">
+        <img [src]="headerConfig.profilePic" class="h-100" />
+      </div>
+      <div class="navbar-nav d-flex flex-column align-items-center">
+        <a
+          *ngFor="let link of headerConfig.menu"
+          class="nav-item nav-link font-syncopate my-0 py-0 pb-1 py-lg-4 text-dark menu-responsive hover-animation"
+          [routerLink]="link.routerLink"
+          routerLinkActive="active"
+          (click)="toggleMenu()"
+        >
+          <!-- <i [class]="link.icon" aria-hidden="true" class="me-2 d-md-none"></i> -->
+          {{ link.name }}</a
+        >
+      </div>
+    </div>
+    <div
+      class="col-12 col-lg-6 col-xl-5 d-flex flex-column align-items-center position-relative"
+    >
+      <!-- profile section -->
+      <div class="profile-pic mb-3 mb-1 mb-lg-3">
+        <img [src]="headerConfig.profilePic" class="h-100" />
+      </div>
+      <p
+        class="mx-3 mx-md-5 font-syncopate profile-description mb-0 d-none d-lg-block"
+      >
+        ______Wrekslab®______Paris London based musician - pianist by trade &
+        self-taught composer. My expertise lies on production & composition of
+        modern tracks. I make mockups using the best sounds libraries on the
+        market (CS, OT, NI, CSS). Please take a look on my portfolio.
+      </p>
+      <div class="w-100 mx-2 mx-md-5 px-3 px-md-5 mt-2 mt-md-4 social-media">
+        <div class="row w-100 m-0">
+          <div class="col-4 text-center">
+            <a
+              href="https://www.instagram.com/wrekslab/"
+              target="_blank"
+              class="text-dark"
+            >
+              <i
+                class="fa fa-instagram fa-3x social-icon"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </div>
+          <div class="col-4 text-center">
+            <a
+              href="https://www.youtube.com/channel/UCDwfo1sexfRMQ2S4ECsDO7w"
+              target="_blank"
+              class="text-dark"
+            >
+              <i class="fa fa-youtube fa-3x social-icon" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="col-4 text-center">
+            <a
+              href="https://www.linkedin.com/company/recursiflab/"
+              target="_blank"
+              class="text-dark"
+            >
+              <i
+                class="fa fa-linkedin fa-3x social-icon"
+                aria-hidden="true"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<header class="site-header">
+  <a class="logo" [routerLink]="['/home']">
+    <img
+      src="assets/images/Logotest.png"
+      width="110"
+      height="20"
+      class="d-inline-block d-inline-block align-top rounded"
+    />
+  </a>
+  <nav class="site-nav">
+    <ul>
+      <li class="active">
+        <a class="nav-item nav-link active" [routerLink]="['/home']">Home</a>
+      </li>
+      <li>
+        <a class="nav-item nav-link" [routerLink]="['/work']">Works</a>
+      </li>
+      <li><a class="nav-item nav-link" [routerLink]="['blog']">Blog</a></li>
+      <li>
+        <a class="nav-item nav-link" [routerLink]="['/contact']">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="account-actions">
+    <div class="account-dropdown">
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <a href="#0" class="sign-out-link"></a>
+  </div>
+</header>
+-->
+
+<!--
+<div class="wrapper">
+  <nav id="nav" class="activemark">
+    <a class="" [routerLink]="['/home']">
+      <img
+        src="assets/images/Logotest.png"
+        width="30"
+        height="30"
+        class="d-inline-block d-inline-block align-top rounded"
+      />
+    </a>
+    <ul>
+      <li>
+        <a class="nav-item nav-link active" [routerLink]="['/home']">Home</a>
+      </li>
+      <li><a class="nav-item nav-link" [routerLink]="['/work']">Works</a></li>
+      <li><a class="nav-item nav-link" [routerLink]="['blog']">Blog</a></li>
+      <li>
+        <a class="nav-item nav-link" [routerLink]="['/contact']">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+-->

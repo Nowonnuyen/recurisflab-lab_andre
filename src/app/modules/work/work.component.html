@@ -1,0 +1,432 @@
+<!-- possibilité titre en mode image
+    <div class="container">
+      <div class="img_container">
+        <br/>
+        <img class="img" src="" alt="" />
+      </div>
+      <br>
+    </div>
+    -->
+<!-- catégorie 1 rien titre pour le moment!!!!! -->
+<!--
+<div class="container-fluid">
+  <h1 class="text-dark fs-1">Portfolio</h1>
+</div>
+-->
+<div class="w-100 trailer-section py-4">
+  <div class="w-100 px-5">
+    <div class="w-100 d-flex">
+      <div class="vertical-bar"></div>
+      <div class="ml-5 video-title">
+        <h2 class="fs-2">Selected Works</h2>
+        <h5 class="fs-5">2022</h5>
+      </div>
+    </div>
+  </div>
+  <img
+    src="../../../assets/images/iconePrinceRed.png"
+    [width]="120"
+    class="icon-prince-white mr-5 d-none d-md-block"
+  />
+  <div class="w-100 px-5 mt-4">
+    <div class="row">
+      <div class="col-12 col-md-6 mb-3 big-video-section">
+        <app-video [video]="showedVideos[0]"></app-video>
+      </div>
+      <div
+        class="col-12 bg-black col-md-6 row vh-100 overflow-auto grid-videos m-0 p-0"
+      >
+        <ng-container
+          *ngFor="let video of showedVideos; let f = first; let i = index"
+        >
+          <div class="col-6 mb-3 bg-black" *ngIf="!f">
+            <app-video [video]="video"></app-video>
+          </div>
+        </ng-container>
+        <div class="col-12 mb-3">
+          <button
+            *ngIf="this.numberOfVideos < this.videos.length"
+            class="d-inline-block text-white font-syncopate"
+            (click)="loadMore()"
+          >
+            More videos
+          </button>
+          <button
+            *ngIf="this.numberOfVideos >= this.videos.length"
+            class="d-inline-block text-white font-syncopate"
+            (click)="this.numberOfVideos = 5; setVideos()"
+          >
+            Show less
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="list" *ngFor="let video of videos">
+      <app-video></app-video>
+    </div> -->
+
+    <!-- <div class="list">
+      <div class="treiler_container">
+        <div class="logo_container">
+          <img
+            class="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/4/44/Dune_2021_transparent_logo.png"
+            alt="image"
+          />
+        </div>
+        <div class="adapt">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/tiYVIZD1G9c"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div> -->
+    <!-- titre et lien de la video
+            <div class="video_a">
+              Посмотреть видео можно по<a
+                href="https://www.youtube.com/watch?v=KgjEC2Wxy3Q"
+                target="_blank"
+              >
+                ссылке</a
+              >
+            </div>
+          -->
+    <!-- </div>
+      <div class="description">
+        <p>Film: Dune (Music: Day Night)</p>
+        <p></p>
+        <p>© Recursiflab</p>
+        <p></p>
+      </div>
+    </div>
+    <div class="list">
+      <div class="treiler_container">
+        <div class="logo_container">
+          <img
+            class="logo"
+            src="https://images.fanart.tv/fanart/the-matrix-5b41d3cbeff6d.png"
+            alt="image"
+          />
+        </div>
+        <div class="adapt">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/tiYVIZD1G9c"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div> -->
+    <!-- titre et lien de la video
+            <div class="video_a">
+              Посмотреть видео можно по<a
+                href="https://www.youtube.com/watch?v=4McenUEna3E"
+                target="_blank"
+              >
+                ссылке</a
+              >
+            </div>
+            -->
+    <!-- </div>
+      <div class="description">
+        <p>Film: Matrix (Music: Trail)</p>
+        <p></p>
+        <p>© Recursiflab</p>
+        <p></p>
+      </div>
+    </div>
+    <div class="list">
+      <div class="treiler_container">
+        <div class="logo_container">
+          <img
+            class="logo"
+            src="https://images.fanart.tv/fanart/paterson-57efa53b9cd16.png"
+            alt="image"
+          />
+        </div>
+        <div class="adapt">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/tiYVIZD1G9c"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div> -->
+    <!--Titre lien Vidéo
+            <div class="video_a">
+              Посмотреть видео можно по<a
+                href="https://www.youtube.com/watch?v=vwZ_m_EFHzs"
+                target="_blank"
+              >
+                ссылке</a
+              >
+            </div>
+            -->
+    <!-- </div>
+      <div class="description">
+        <p>Film: Paterson (Music: Ed Regulate)</p>
+        <p></p>
+        <p>© Recursiflab</p>
+        <p></p>
+      </div>
+    </div>
+    <div class="list">
+      <div class="treiler_container">
+        <div class="logo_container">
+          <img
+            class="logo"
+            src="https://images.fanart.tv/fanart/se7en-525fb1844f2c8.png"
+            alt="image"
+          />
+        </div>
+        <div class="adapt">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/tiYVIZD1G9c"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div> -->
+    <!--Titre lien Vidéo
+            <div class="video_a">
+              Посмотреть видео можно по<a
+                href="https://www.youtube.com/watch?v=zw81ihoukKU"
+                target="_blank"
+              >
+                ссылке</a
+              >
+            </div>
+          -->
+    <!-- </div>
+      <div class="description">
+        <p>Film: Seven (Music: Havoc)</p>
+        <p></p>
+        <p>© Recursiflab</p>
+        <p></p>
+      </div> -->
+    <!--Debut Card Trailer en gros solo
+        </div>
+        <div class="list_full">
+          <div class="treiler_container">
+            <div class="logo_container">
+              <img
+                class="logo"
+                src="https://github.com/novikilya47/Verst/raw/main/The_Hateful_Eight.png"
+                alt="image"
+              />
+            </div>
+            <div class="adapt">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/x6aFkwiOJwk"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video_a">
+              Посмотреть видео можно по<a
+                href="https://www.youtube.com/watch?v=x6aFkwiOJwk"
+                target="_blank"
+              >
+                ссылке</a
+              >
+            </div>
+          </div>
+        
+          <div class="description">
+            <p>Рейтинги: IMDb: 7.8 Кинопоиск: 7.91</p>
+            <p>Дата выхода: 7 декабря 2015 года</p>
+            <p>Жанр: Триллеры, Драмы, Криминал, Вестерны, Детективы</p>
+            <p>
+              События картины происходят в штате Вайоминг, спустя пару лет после
+              завершения гражданской войны. Передвигаясь по безлюдной заснеженной
+              дороге в Ред Рок, где должна состояться казнь, дилижанс, в котором
+              едут Джон «Вешатель» Рут и его очередной трофей, преступница Дейзи
+              Домерг, разыскиваемая властями за убийство живой или мёртвой с
+              наградой в десять тысяч долларов, встречает двух странников. Ими
+              оказываются охотник за головами майор Маркиз Уоррен и южный ренегат
+              Крис Мэнникс, представившийся как новый шериф города. Заблудившись
+              из-за усилившейся метели, четверо странников находят приют в лавке
+              Манни, зайдя в которую они вместо хозяйки видят еще четверых
+              незнакомцев: человека, назвавшегося Бобом по кличке «Мексиканец»,
+              присматривающего, по его словам, за лавкой в отсутствие хозяйки,
+              ковбоя Джо Гейджа, Освальдо «Карлика» Мобрея и Сэнфорда Смитерса,
+              являющегося отставным генералом Конфедерации. Очень скоро Джон Рут,
+              сообщивший о важности своей пленницы, начинает понимать, что
+              окружающие его люди что-то замышляют, и он может вообще не доехать в
+              Ред Рок, ведь один из присутствующих на самом деле не тот, за кого
+              себя выдаёт.
+            </p>
+          </div>
+        fin solo card trailer-->
+  </div>
+</div>
+<div class="w-100 p-3 player-section">
+  <div class="music-player">
+    <player [playerList]="image_to_music"></player>
+  </div>
+</div>
+<!-- Lecteur mp3 audio only
+        <div class="list_music">
+          <div class="description_music">
+            Квентин Тарантино – тот еще гик и зануда, когда дело касается музыки.
+            Он самостоятельно ездит по старым магазинам в поисках давно забытых
+            всеми пластинок. Находит альбомы, которые ему нравятся, вдохновляется
+            старыми треками и придумывает, какие из них подходят к сюжету его
+            нового фильма. Затем ассистенты Квентина начинают страдать. Пока
+            Тарантино вдохновляется, его помощники долго и мучительно борются за
+            получение авторских прав. И если выбить разрешение на использование
+            музыки удается, саундтреки становятся полноценными героями фильмов
+            Квентина и снова набирают популярность у широкой публики. Музыка
+            переживает второе рождение благодаря Тарантино, который создает
+            колорит во многом именно благодаря звуковой дорожке. Бренды
+            моментально скупают треки после выхода фильмов, и уже разваливающиеся
+            группы появляются на первых строчках чартов, в том числе на Billboard.
+            Фрагменты фильмов Квентина, в которых звучат композиции, становятся
+            новыми клипами для забытых коллективов. Тарантино переворачивает не
+            только мир кино, но и мир музыки. Раз за разом.
+          </div>
+          <div class="music">
+            <div class="music_name">Khang Nguyen (Nowon) - Day and night</div>
+            <div class="img_a_container">
+              <img
+                class="img_a"
+                src="https://github.com/novikilya47/Verst/raw/main/bang.jpg"
+                alt="image"
+              />
+            </div>
+            <audio
+              src="https://github.com/novikilya47/Verst/raw/main/Nancy%20Sinatra-Bang%20Bang.mp3"
+              controls="controls"
+            ></audio>
+            <div class="music_a">
+              Скачать песню можно по<a
+                href="https://github.com/novikilya47/Verst/raw/main/Nancy%20Sinatra-Bang%20Bang.mp3"
+                download
+              >
+                ссылке</a
+              >
+            </div>
+          </div>
+          <div class="music">
+            <div class="music_name">
+              Urge Overkill - Girl You'll Be a Woman Soon
+            </div>
+            <div class="img_a_container">
+              <img
+                class="img_a"
+                src="https://github.com/novikilya47/Verst/raw/main/woman.jpg"
+                alt="image"
+              />
+            </div>
+            <audio
+              src="https://github.com/novikilya47/Verst/raw/main/urge%20overkill-girl%20you%20will%20be%20woman%20soon.mp3"
+              controls="controls"
+            ></audio>
+            <div class="music_a">
+              Скачать песню можно по<a
+                href="https://github.com/novikilya47/Verst/raw/main/urge%20overkill-girl%20you%20will%20be%20woman%20soon.mp3"
+                download
+              >
+                ссылке</a
+              >
+            </div>
+          </div>
+          <div class="music">
+            <div class="music_name">
+              George Baker Selection - Little Green Bag
+            </div>
+            <div class="img_a_container">
+              <img
+                class="img_a"
+                src="https://github.com/novikilya47/Verst/raw/main/bag.jpg"
+                alt="image"
+              />
+            </div>
+            <audio
+              src="https://github.com/novikilya47/Verst/raw/main/George%20Baker%20Selection-Little%20Green%20Bag.mp3"
+              controls="controls"
+            ></audio>
+            <div class="music_a">
+              Скачать песню можно по<a
+                href="https://github.com/novikilya47/Verst/raw/main/George%20Baker%20Selection-Little%20Green%20Bag.mp3"
+                download
+              >
+                ссылке</a
+              >
+            </div>
+          </div>
+          <div class="music">
+            <div class="music_name">
+              Stealers Wheel - Stuck In The Middle With You
+            </div>
+            <div class="img_a_container">
+              <img
+                class="img_a"
+                src="https://github.com/novikilya47/Verst/raw/main/wheel.jpg"
+                alt="image"
+              />
+            </div>
+            <audio
+              src="https://github.com/novikilya47/Verst/raw/main/Stealers%20Wheel-Stuck%20In%20The%20Middle%20With%20You.mp3"
+              controls="controls"
+            ></audio>
+            <div class="music_a">
+              Скачать песню можно по<a
+                href="https://github.com/novikilya47/Verst/raw/main/Stealers%20Wheel-Stuck%20In%20The%20Middle%20With%20You.mp3"
+                download
+              >
+                ссылке</a
+              >
+            </div>
+          </div>
+          <div class="music">
+            <div class="music_name">Joe Tex - I Gotcha</div>
+            <div class="img_a_container">
+              <img
+                class="img_a"
+                src="https://github.com/novikilya47/Verst/raw/main/tex.jpg"
+                alt="image"
+              />
+            </div>
+            <audio
+              src="https://github.com/novikilya47/Verst/raw/main/Joe%20Tex-I%20Gotcha.mp3"
+              controls="controls"
+            ></audio>
+            <div class="music_a">
+              Скачать песню можно по<a
+                href="https://github.com/novikilya47/Verst/raw/main/Joe%20Tex-I%20Gotcha.mp3"
+                download
+              >
+                ссылке</a
+              >
+            </div>
+          </div>
+          <button>
+            <a
+              class="archive"
+              href="https://github.com/novikilya47/Verst/raw/main/archive.zip"
+              download
+            >
+              Download Audio</a
+            >
+          </button>
+        </div>
+        -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->

@@ -1,0 +1,12 @@
+<div class="container my-5">
+  <!-- <articles-row
+    *ngIf="isOdd"
+    [article1]="Article[index]"
+    [article2]="Article[index + 1]"
+  ></articles-row> -->
+  <div class="row">
+    <div class="col-12 col-md-6" *ngFor="let a of Article">
+      <articles-row [article1]="a"></articles-row>
+    </div>
+  </div>
+</div>

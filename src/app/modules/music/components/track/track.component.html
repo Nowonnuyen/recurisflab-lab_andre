@@ -1,0 +1,32 @@
+<div id="parallax-world-of-ugg">
+  <section>
+    <div class="title">
+      <h3>Focus on</h3>
+      <h1>Wrekslab Fabric</h1>
+    </div>
+  </section>
+
+  <div *ngFor="let a of track.content">
+    <section>
+      <div [id]="a.id" class="track-section">
+        <h2>{{ a.title }}</h2>
+      </div>
+    </section>
+
+    <section>
+      <div class="block">
+        <p>
+          {{ a.text }}
+        </p>
+        <p class="line-break margin-top-10"></p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!--Player-->
+<div class="w-100 p-3 player-section">
+  <div class="music-player">
+    <player [playerList]="music"></player>
+  </div>
+</div>

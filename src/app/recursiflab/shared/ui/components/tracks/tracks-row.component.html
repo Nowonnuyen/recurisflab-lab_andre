@@ -1,0 +1,43 @@
+<div class="component-card">
+  <div class="component-card_image">
+    <div class="adapt" *ngIf="track1.video; else img">
+      <iframe
+        #iframe
+        width="560"
+        height="315"
+        [src]="url"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <ng-template #img>
+      <div class="component-card_image-inside">
+        <img [src]="track1.coverImage" alt="" title="" />
+      </div>
+    </ng-template>
+  </div>
+  <div class="blog-detail {{ track1.video ? 'mt-5 pos-top-mb' : '' }}">
+    <h3 *ngIf="!track1.video">{{ track1.title }}</h3>
+    <h3 *ngIf="track1.description" class="track-title">
+      {{ track1.description }}
+    </h3>
+    <label *ngIf="track1.date">{{ track1.date }}</label>
+    <p *ngIf="track1.abstract && track1.date">{{ track1.abstract }}</p>
+    <label *ngIf="track1.abstract && !track1.id" class="fw-light d-block my-2">
+      {{ track1.abstract }}
+    </label>
+    <a
+      *ngIf="track1.id"
+      class="btn btn-read-more"
+      [href]="'/music/track/' + track1.id"
+      >Listen</a
+    >
+    <a *ngIf="track1.title && !track1.id" class="btn btn-read-more">{{
+      track1.title
+    }}</a>
+  </div>
+</div>
+
+<!-- https://www.youtube.com/embed/xh7O-FUyyuw -->

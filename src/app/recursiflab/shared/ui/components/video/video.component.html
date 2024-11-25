@@ -1,0 +1,24 @@
+<div class="w-100 bg-black">
+  <div
+    class="w-100 mb-2 video-thumbnail position-relative bg-black"
+    type="button"
+    (click)="openVideoDetail()"
+  >
+    <!-- video thumbnail -->
+    <img class="w-100 z-10" [src]="video.thumbnail" alt="" />
+    <div
+      class="play-button d-flex align-items-center justify-content-center w-100 h-100"
+    >
+      <img
+        src="../../../assets/images/play_button_80.png"
+        class="play-button-img"
+      />
+    </div>
+  </div>
+  <div class="w-100">
+    <p class="text-white m-0 p-0 video-title">{{ video.title }}</p>
+  </div>
+  <div class="w-100">
+    <p class="text-white m-0 p-0 video-description">{{ video.description }}</p>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Syncopate&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+p {
+  font-size: 0.6em;
+  line-height: 1.5em;
+  text-align: left;
+  font-family: "Syncopate", sans-serif;
+  color: black !important;
+}
+
+.footer-section {
+  .icon-prince-white {
+    width: 100px;
+  }
+
+  .profile-pic {
+    width: 100px !important;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid rgb(76, 74, 74);
+    opacity: 88%;
+		margin: 16px auto;
+
+    img {
+			width: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+.footer-copyright {
+  p {
+    color: white !important;
+  }
+}
+
+.email-section {
+  a {
+    font-size: 0.6rem;
+  }
+	position: relative;
+	.social-media {
+		position: absolute;
+		top: 90%;
+	}
+}
