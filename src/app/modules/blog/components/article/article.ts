@@ -3,7 +3,7 @@ export default Article = [
   {
     id: '1',
     title: "RAW",
-    date: 'April 19 2022',
+    date: 'April 19 2025',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     abstract: 'Martha Argerich',
     coverImage:
@@ -38,7 +38,7 @@ export default Article = [
   {
     id: '2',
     title: "FURY",
-    date: 'July 21 2022',
+    date: 'July 21 2025',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     coverImage:
       'https://karwaisartwork.com/wp-content/uploads/2022/02/IMG_8424-1-scaled-e1644757009930-1024x799.jpg',
@@ -48,7 +48,7 @@ export default Article = [
   {
     id: '3',
     title: "CLASS",
-    date: 'December 21 2022',
+    date: 'December 21 2024',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     abstract: 'Arsène Wenger',
     coverImage:
@@ -58,7 +58,7 @@ export default Article = [
   {
     id: '4',
     title: "RHYTHM",
-    date: 'December 20 2022',
+    date: 'December 10 2024',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     abstract: 'Marguerite Duras',
     coverImage:
@@ -68,7 +68,7 @@ export default Article = [
   {
     id: '5',
     title: "SHEER",
-    date: 'March 11 2022"',
+    date: 'March 11 2023"',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     abstract: 'Mike Tyson',
     coverImage:
@@ -78,7 +78,7 @@ export default Article = [
   {
     id: '6',
     title: "EPIC",
-    date: 'April 13 2023',
+    date: 'April 13 2022',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     abstract: 'Ayrton Senna',
     coverImage:
@@ -88,7 +88,7 @@ export default Article = [
   {
     id: '7',
     title: "FEELING",
-    date: 'April 11 2023',
+    date: 'April 3 2023',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     abstract: 'Nat Cole',
     coverImage:
