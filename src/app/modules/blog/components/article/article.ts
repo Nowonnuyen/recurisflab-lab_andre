@@ -58,7 +58,7 @@ export default Article = [
   {
     id: '4',
     title: "RHYTHM",
-    date: 'December 30 2022',
+    date: 'December 20 2022',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     abstract: 'Marguerite Duras',
     coverImage:
@@ -98,7 +98,7 @@ export default Article = [
   {
     id: '8',
     title: "ELUSIVE",
-    date: 'JUN 21 2023',
+    date: 'JUN 13 2023',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     abstract: 'Frédéric Chopin',
     coverImage:
@@ -108,7 +108,7 @@ export default Article = [
   {
     id: '9',
     title: "CADENCE",
-    date: 'AUGUST 13 2023',
+    date: 'AUGUST 11 2023',
     image: 'https://source.unsplash.com/f9C8ytxaItI/2000x1200',
     abstract: 'André Agassi',
     coverImage:
