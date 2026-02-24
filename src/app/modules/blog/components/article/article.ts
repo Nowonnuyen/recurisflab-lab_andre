@@ -11,7 +11,7 @@ export default Article = [
     content: [
       {
         id: 'i1',
-        title: 'PhenomeAdvenon',
+        title: 'Phenmenon',
         image:
           'https://www.francetvinfo.fr/pictures/xog8ZCWFKs346NHsBCYnD-lCn50/1200x900/2019/04/12/argerich_1998_7_d.jpg',
         text: `Has autem provincias, quas Orontes ambiens amnis imosque pedes Cassii montis illius celsi praetermeans funditur 

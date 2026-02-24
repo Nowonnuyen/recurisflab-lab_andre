@@ -16,7 +16,7 @@ export class WorkComponent implements OnInit {
       video: 'https://www.youtube.com/embed/sZYXmYeKNhI',
       title: 'Dune | © Warner Bros',
       description: 'Trailer Film',
-      abstract: '2021'
+      abstract: '2022'
     },
     {
       thumbnail: '../../../assets/images/Ferrari.jpg',
@@ -24,7 +24,7 @@ export class WorkComponent implements OnInit {
       video: 'https://www.youtube.com/embed/CuugqlKXpj8',
       title: 'RedSkin | © Ferrari',
       description: 'Advertising',
-      abstract: '2023'
+      abstract: '2024'
     },
     {
       thumbnail: '../../../assets/images/Apple.jpg',
@@ -32,7 +32,7 @@ export class WorkComponent implements OnInit {
       video: 'https://www.dailymotion.com/embed/video/x8m5o4x?autoplay=1',
       title: 'Dynamic Island | © Apple',
       description: 'Advertising',
-      abstract: '2023'
+      abstract: '2024'
     },
     {
       thumbnail: '../../../assets/images/dior.png',
@@ -40,7 +40,7 @@ export class WorkComponent implements OnInit {
       video: 'https://www.youtube.com/embed/tb8LutyHmk0',
       title: 'Dior | © Iconoclast',
       description: 'Advert Media',
-      abstract: '2019'
+      abstract: '2021'
     },
     {
       thumbnail: '../../../assets/images/iniesta2.png',
@@ -48,7 +48,7 @@ export class WorkComponent implements OnInit {
       video: 'https://www.youtube.com/embed/tb8LutyHmk0',
       title: 'Andres | © Lagencia',
       description: 'Video Editing',
-      abstract: '2018'
+      abstract: '2019'
     },
     {
       thumbnail: '../../../assets/images/1917.png',
@@ -56,7 +56,7 @@ export class WorkComponent implements OnInit {
       video: 'https://www.youtube.com/embed/tb8LutyHmk0',
       title: '1917 | © Dreamworks',
       description: 'Trailer Film',
-      abstract: '2019'
+      abstract: '2020'
     },
     {
       thumbnail: '../../../assets/images/emptyThumbnail.png',
