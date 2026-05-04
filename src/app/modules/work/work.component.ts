@@ -24,7 +24,7 @@ export class WorkComponent implements OnInit {
       video: 'https://www.youtube.com/embed/CuugqlKXpj8',
       title: 'RedSkin | © Ferrari',
       description: 'Advertising',
-      abstract: '2024'
+      abstract: '2025'
     },
     {
       thumbnail: '../../../assets/images/Apple.jpg',
@@ -32,7 +32,7 @@ export class WorkComponent implements OnInit {
       video: 'https://www.dailymotion.com/embed/video/x8m5o4x?autoplay=1',
       title: 'Dynamic Island | © Apple',
       description: 'Advertising',
-      abstract: '2024'
+      abstract: '2025'
     },
     {
       thumbnail: '../../../assets/images/dior.png',
@@ -40,7 +40,7 @@ export class WorkComponent implements OnInit {
       video: 'https://www.youtube.com/embed/tb8LutyHmk0',
       title: 'Dior | © Iconoclast',
       description: 'Advert Media',
-      abstract: '2021'
+      abstract: '2022'
     },
     {
       thumbnail: '../../../assets/images/iniesta2.png',
